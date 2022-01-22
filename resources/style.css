@@ -1,0 +1,77 @@
+/* Universal Styles */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+a {
+    text-decoration: none; 
+    color: black;
+}
+
+
+/* Header Section */
+header {
+    position: sticky;
+    top: 0;
+    border-bottom: 2px red solid;
+    width: 100vw;
+    justify-content: space-between;
+    background: white;
+}
+
+/* Logo */
+.logo-container {
+    /* border: solid 1px green; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.logo-text {
+    position: absolute;
+    text-align: center;
+    font-size: 4rem; 
+    z-index: 10;
+}
+.denmark-flag-map {
+    height: auto;
+    width: 15%;
+    opacity: 40%;
+}
+
+/* Navigation */
+nav {
+    /* border: solid 2px blue; */
+    width: 100%;
+    height: auto;
+}
+
+.nav__list{
+    /* border: solid 1px green; */
+    height: auto;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.nav__link:hover {
+    background-color: red;
+}
+
+/* Hero Image */
+.hero-image {
+    width: 100vw;
+}
+
+.hero-image img {
+    width: 100%;
+}
