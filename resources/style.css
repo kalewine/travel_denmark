@@ -16,10 +16,10 @@ a {
 header {
     position: sticky;
     top: 0;
-    border-bottom: 2px red solid;
-    width: 100vw;
+    width: 100%;
     justify-content: space-between;
     background: white;
+    z-index: 1;
 }
 
 /* Logo */
@@ -56,22 +56,227 @@ nav {
     /* border: solid 1px green; */
     height: auto;
     width: 100%;
-    list-style: none;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.nav__list-item {
+    /* border: solid pink; */
+    text-align: center;
+    font-size: 1.5rem;
+    list-style: none;
+    width: 200px;
+    height: 4rem;
+}
+
+.nav__link {
+    /* border: solid blue; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 1s ease;
 }
 
 .nav__link:hover {
-    background-color: red;
+    background: rgb(247, 157, 157);
+    color: white;
 }
 
 /* Hero Image */
 .hero-image {
-    width: 100vw;
+    /* border: solid 2px red; */
+    position: relative;
+    width: 100%;
+    margin-top: -100px;
+
 }
 
 .hero-image img {
     width: 100%;
+    height: auto;
+    margin-top: -100px;
 }
+
+/* About section */
+.about {
+    /* border: solid 1px blue; */
+    position: relative;
+    display: flex; 
+    height: 300px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 2rem 4rem;
+}
+
+.about__left {
+    /* border: solid 1px purple; */
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__heading {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.about__text {
+    font-size: 1.2rem;
+}
+
+.about__image {
+    width: 400px;
+    height: auto;
+}
+
+/* Booking */
+.booking {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 200px;
+    width: 100%;
+    background-color: rgb(247, 157, 157);
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 75px;
+    border: solid red 2px;
+    font-size: 1.2rem;
+    font-weight: bold; 
+    color: red;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgb(255, 251, 251);
+    
+  }
+  
+  button:active, button:focus {
+    outline: none;
+  }
+  
+  button:hover {
+    color: #fff;
+    box-shadow: 0px 4px 8px 1px #000;
+    transition: all 0.3s ease;
+  }
+  
+  
+  button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+  /*   background: url() no-repeat;
+  ); */
+    background: red;
+    transition-property: width border-radius;
+    transition-duration: 0.4s;
+    z-index: -1;
+  
+  }
+  
+  
+  button:hover::after {
+    width: 120%;
+    border-radius: 8px;
+  }
+/* Destinations */
+.destinations {
+    margin: 4rem; 
+}
+
+.destinations__row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem;
+}
+
+.destinations__content {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+.destinations__heading {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.destinations__text {
+    font-size: 1.2rem;
+}
+
+.destinations__img {
+    width: 450px;
+    height: auto;
+    max-height: 600px;
+}
+
+#odd-row {
+    flex-direction: row-reverse
+}
+
+/* Footer */
+footer {
+    background: rgb(196, 30, 30);
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.footer__logo-container {
+    /* border: solid black 2px; */
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__logo-text {
+    position: absolute;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 10;
+}
+
+.footer__denmark-flag-map {
+    /* border: solid 2px black; */
+    width: 200px;
+    height: auto;
+    filter: invert(30%);
+    transform: translateX(30%);
+    opacity: 90%;
+}
+
+.footer__address {
+    color: white;
+    text-align: center;
+}
+
