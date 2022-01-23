@@ -27,9 +27,13 @@ header {
     z-index: 1;
 }
 
+header.scrolled{
+    display: flex;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+
 /* Logo */
 .logo-container {
-    /* border: solid 1px green; */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -38,16 +42,36 @@ header {
     padding: 1rem;
 }
 
+.logo-container.scrolled {
+    align-items: flex-start;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+}
+
 .logo-text {
     position: absolute;
     text-align: center;
     font-size: 2.5rem; 
     z-index: 10;
 }
+
+.logo-text.scrolled{
+    font-size: 2rem;
+    text-align: center;
+    max-width: 200px;
+    line-height: 0.8;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
 .denmark-flag-map {
     height: auto;
-    width: 10%;
+    width: 15%;
     opacity: 40%;
+    margin-left: 5%;
+}
+
+.denmark-flag-map.scrolled {
+    width: 100px;
+    /* margin-left: 25px; */
 }
 
 /* Navigation */
@@ -67,6 +91,11 @@ nav {
     padding: 0.5rem 0.5rem 0 0.5rem;
 }
 
+.nav__list.scrolled {
+    margin-top: 1rem;
+    justify-content: flex-end;
+}
+
 .nav__list-item {
     /* border: solid pink; */
     text-align: center;
@@ -74,6 +103,11 @@ nav {
     list-style: none;
     width: 200px;
     height: 4rem;
+}
+
+.nav__list-item.scrolled {
+    width: 150px;
+    font-size: 1.3rem;
 }
 
 .nav__link {
@@ -92,10 +126,18 @@ nav {
 }
 
 /* Hero Image */
+.positioner {
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .hero-image {
     /* border: solid 2px red; */
     position: relative;
-    /* margin-top: -50px; */
+    /* top: 0; */
     width: 100%;
 
 }

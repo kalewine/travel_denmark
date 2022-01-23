@@ -1,4 +1,45 @@
-// About section fade in
+// Header Observer
+const positioner = document.querySelector(".positioner");
+
+const header = document.querySelector('header');
+const logoContainer = document.querySelector('.logo-container');
+const logoText = document.querySelector('.logo-text');
+const logoImg = document.querySelector('.denmark-flag-map');
+const navList = document.querySelector('.nav__list')
+const navListItem = document.querySelectorAll('.nav__list-item');
+
+
+const toChange = [header, logoContainer, logoText, logoImg, navList]
+
+const scrolledOptions = {
+    threshold: 1
+}
+
+const scrolledAfterLoad = new IntersectionObserver ((entries, scrolledAfterLoad) => {
+    entries.forEach(entry => {
+        if(!entry.isIntersecting){
+            // header.classList.add("scrolled")
+            toChange.forEach(element=> {
+                element.classList.add('scrolled')
+            })
+            navListItem.forEach(item => {
+                item.classList.add('scrolled')
+            })
+        }else if (entry.isIntersecting){
+            toChange.forEach(element=> {
+                element.classList.remove('scrolled')
+            })
+            navListItem.forEach(item => {
+                item.classList.remove('scrolled')
+                })
+            
+        }
+        
+    })
+}, scrolledOptions)
+
+scrolledAfterLoad.observe(positioner)
+// About Observer
 const fadeIn = document.querySelector('.fade-in');
 const appearOptions = {
     rootMargin: "-100px 0px 0px 0px"
@@ -18,7 +59,7 @@ const appearOnScroll = new IntersectionObserver ((entries, appearOnScroll) => {
 
 appearOnScroll.observe(fadeIn);
 
-// Destinations slide in
+// Destinations Observer
 const destinations = document.querySelectorAll('.destinations__row');
 
 const slideInOptions = {
